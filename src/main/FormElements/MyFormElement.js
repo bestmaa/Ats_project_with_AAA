@@ -3,7 +3,7 @@ export function MyInput({ name, use = false, wn = true, width = '150px', readOnl
 	return (
 		<div className="flex">
 			{wn && (
-				<b style={{ width: width }} className="p-8 rounded-6 mt-10 mb-10 ">
+				<b style={{ width: width }} className="p-2 rounded-6 mt-5 mb-5 ">
 					{use && (
 						<b className="text-red" style={{ marginLeft: '-6px' }}>
 							*
@@ -14,7 +14,7 @@ export function MyInput({ name, use = false, wn = true, width = '150px', readOnl
 			)}
 			<input
 				type="text"
-				className="w-full p-8 rounded-6 mt-10 mb-10 "
+				className="w-full p-2 rounded-6 mt-5 mb-5 "
 				placeholder={name}
 				name={name}
 				readOnly={readOnly}
@@ -27,7 +27,7 @@ export function MyInputDate({ name, use = false, wn = true, width = '150px', onI
 	return (
 		<div className="flex">
 			{wn && (
-				<b style={{ width: width }} className="p-8 rounded-6 mt-10 mb-10 ">
+				<b style={{ width: width }} className="p-2 rounded-6 mt-5 mb-5 ">
 					{use && (
 						<b className="text-red" style={{ marginLeft: '-6px' }}>
 							*
@@ -38,7 +38,7 @@ export function MyInputDate({ name, use = false, wn = true, width = '150px', onI
 			)}
 			<input
 				type="Date"
-				className="w-full p-8 rounded-6 mt-10 mb-10 "
+				className="w-full p-2 rounded-6 mt-5 mb-5 "
 				placeholder={name}
 				name={name}
 				required={use}
@@ -52,7 +52,7 @@ export function MySelect({ name, use = false, data, wn = true, width = '150px' }
 		<>
 			<div className="flex">
 				{wn && (
-					<b style={{ width: width }} className="p-8 rounded-6 mt-10 mb-10 ">
+					<b style={{ width: width }} className="p-2 rounded-6 mt-5 mb-5 ">
 						{use && (
 							<b className="text-red" style={{ marginLeft: '-8px' }}>
 								*
@@ -61,7 +61,7 @@ export function MySelect({ name, use = false, data, wn = true, width = '150px' }
 						{name}:
 					</b>
 				)}
-				<select className="w-full p-8 rounded-6 mt-10 mb-10" placeholder={name} name={name} required={use}>
+				<select className="w-full p-2 rounded-6 mt-5 mb-5" placeholder={name} name={name} required={use}>
 					<option value="">{name}...</option>
 					{data?.map((d, i) => (
 						<option key={i}>{d.CustomerName ? d.CustomerName : d}</option>
@@ -76,7 +76,7 @@ export function MyTextField({ name, use = false, wn = true, width = '150px' }) {
 		<>
 			<div className="flex">
 				{wn && (
-					<b style={{ width: width }} className="p-8 rounded-6 mt-10 mb-10 ">
+					<b style={{ width: width }} className="p-2 rounded-6 mt-5 mb-5 ">
 						{use && (
 							<b className="text-red" style={{ marginLeft: '-8px' }}>
 								*
@@ -85,7 +85,7 @@ export function MyTextField({ name, use = false, wn = true, width = '150px' }) {
 						{name}:
 					</b>
 				)}
-				<textarea placeholder={name} className="w-full p-8 rounded-6 mt-10 mb-10"></textarea>
+				<textarea placeholder={name} className="w-full p-2 rounded-6 mt-5 mb-5"></textarea>
 			</div>
 		</>
 	);

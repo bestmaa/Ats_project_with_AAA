@@ -4,7 +4,7 @@ import {
     Routes,
     Route,
 } from "react-router-dom";
-import { Navigate } from './Routes'
+import { Navigate } from './Routes';
 
 function App() {
     return (
@@ -21,4 +21,4 @@ function App() {
     )
 }
 
-export default App
+export default App;

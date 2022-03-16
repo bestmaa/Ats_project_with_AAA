@@ -1,6 +1,6 @@
 import { data } from 'autoprefixer';
 import React from 'react'
-import { MyInput, MyInputDate, MySelect, MyTextField } from './Main/Custom/MyFormElement'
+import { MyInput,  MySelect, MyTextField } from './main/FormElements/MyFormElement';
 
 function Demo() {
   
@@ -32,4 +32,4 @@ function Demo() {
   )
 }
 
-export default Demo
+export default Demo;
