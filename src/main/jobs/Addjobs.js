@@ -11,7 +11,7 @@ import { Receive } from "../FormElements/MySomeFunction";
 function AddJobs() {
   function formSubmit(e) {
     e.preventDefault();
-    let myform = document.querySelector("#demo");
+    let myform = document.querySelector("#addjobs");
     if (myform.checkValidity()) {
       let formData = new FormData(myform);
       let allFormData = {};
