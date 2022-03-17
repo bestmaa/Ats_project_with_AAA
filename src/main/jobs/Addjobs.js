@@ -9,24 +9,26 @@ import Status from "./Component/Status";
 import { Receive } from "../FormElements/MySomeFunction";
 
 function AddJobs() {
-
   function formSubmit(e) {
-    console.log("aay");
     e.preventDefault();
-    let myform = document.querySelector('#demo');
+    let myform = document.querySelector("#demo");
     if (myform.checkValidity()) {
       let formData = new FormData(myform);
       let allFormData = {};
       for (const data of formData.entries()) {
-        data[0] = data[0].replace(/ /g, '');
+        data[0] = data[0].replace(/ /g, "");
         let newdata = { [data[0]]: data[1] };
         allFormData = { ...allFormData, ...newdata };
       }
-      console.log("okokokokok", allFormData);
-    };
-  };
+      let data = { data: allFormData };
+      Receive("api/add-job-postings", data, "POST").then((d) => console.log(d));
+    }
+  
+  }
+
+
   return (
-    <form id="demo" onSubmit={(e)=>formSubmit(e)} >
+    <form id="addjobs">
       <div
         className="shadow-4 p-10 rounded-6 flex flex-col"
         style={{ width: "95%", marginRight: "auto", marginLeft: "auto" }}
@@ -40,15 +42,11 @@ function AddJobs() {
         </div>
 
         <div className="p-10">
-          <MySelect
-            name="Customer Name"
-            data={["aditya", "anisha", "asha"]}
-            width="300px"
-          />
+          <MySelect name="Customer Name" data={[]} width="300px" />
           <MyInput name="Referenc Code" width="300px" />
           <MyInput name="Job Title" width="300px" use={true} />
           <hr className="p-10" />
-          <Tabs >
+          <Tabs>
             <TabList>
               <Tab>Primary Info</Tab>
               <Tab>Secondary Info</Tab>
@@ -57,12 +55,12 @@ function AddJobs() {
               <Tab>Custom Fields</Tab>
             </TabList>
 
-            <TabPanel forceRender={true} >
+            <TabPanel forceRender={true}>
               <PrimaryInfo />
             </TabPanel>
             <TabPanel forceRender={true}>
               <SecondaryInfo />
-            </TabPanel >
+            </TabPanel>
             <TabPanel forceRender={true}>
               <CustomerInfo />
             </TabPanel>
@@ -73,9 +71,14 @@ function AddJobs() {
               <h2>Custom Fields</h2>
             </TabPanel>
           </Tabs>
-          <input type="submit"/>
+          <button
+           className="  p-4 m-4 bg-red-400 rounded-4 hover:bg-red-900 hover:text-white" 
+           
+           onClick={formSubmit}
+          >
+            Create
+          </button>
         </div>
-
       </div>
     </form>
   );

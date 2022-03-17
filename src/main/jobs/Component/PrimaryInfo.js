@@ -1,23 +1,8 @@
 import { MyInput, MySelect, MyTextField } from '../../FormElements/MyFormElement';
 import React  from 'react';
-function formSubmit(e){
-	e.preventDefault();
-	let myform= document.querySelector('#primaryinfo');
-	if(myform.checkValidity()){
-		let formData= new FormData(myform);
-		let  allFormData = {};
-		for (const data of formData.entries()){
-			data[0]= data[0].replace(/ /g,'');
-		 let newdata =  { [data[0]]: data[1] };
-			allFormData = { ...allFormData, ...newdata };	
-		}
-		console.log(allFormData);
-	};
-};
 		function PrimaryInfo(){
 	     return (
                  <>
-		{/* <form id= 'primaryinfo'> */}
 			<MyTextField name="Job Description" use={true} width="300px" />
 			<MyTextField name="Key Skills" use={true} width="300px" />
 			{/* <input type="file" id="myfile" name="myfile" style={{ marginLeft: '250px' }} /> */}
@@ -50,11 +35,6 @@ function formSubmit(e){
 			<MySelect name="Assigned Users" data={['Any', 'demo2']} width="300px" />
 			<MySelect name="Workflow" data={['demo1', 'demo2']} width="300px" />
 			<MySelect name="Assessment Template" data={['demo1', 'demo2']} width="300px" />
-			<div className='flex justify-center'>
-				<button className='p-10 m-10 bg-cyan-600 rounded-4 hover:bg-cyan-900 hover:text-white'  onClick={formSubmit}>Create</button>
-				<button className='p-10 m-10 bg-red-400 rounded-4 hover:bg-red-900 hover:text-white'>Cancel</button>
-			</div>
-			{/* </form> */}
 		</>
 	);
 			};
