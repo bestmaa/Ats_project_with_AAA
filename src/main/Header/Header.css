@@ -1,0 +1,20 @@
+.subMenu{
+    position: absolute;
+    background-color: antiquewhite;
+    display: none;
+    flex-direction: column;
+    /* flex-wrap: wrap; */
+    border-radius: 10px;
+    border: 1px solid black;
+}
+.subMenu > .subMenuItem{
+   padding: 10px;
+   display: inline-block;
+}
+.subMenu > .subMenuItem:hover{
+   background-color: rgb(168, 214, 214);
+   border-radius: 10px;
+}
+.mainMenu:hover .subMenu{
+    display: block;
+}

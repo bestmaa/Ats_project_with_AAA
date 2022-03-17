@@ -18,7 +18,7 @@ function formSubmit(e){
 function CustomerInfo() {
 	return (
 		<>
-		<form id= 'customerinfo'>
+		{/* <form id= 'customerinfo'> */}
 			<MyTextField name="Customer Contacts" width="300px" />
 			<MyInput name="Customer Website Url" width="300px" />
 			<MyTextField name="Internal Customer Info" width="300px" />
@@ -38,7 +38,7 @@ function CustomerInfo() {
 				<button className="p-10 m-10 bg-cyan-600 rounded-4 hover:bg-cyan-900 hover:text-white" onSubmit= {formSubmit}>Create</button>
 				<button className="p-10 m-10 bg-red-400 rounded-4 hover:bg-red-900 hover:text-white">Cancel</button>
 			</div>
-			</form>
+			{/* </form> */}
 		</>
 	);
 }

@@ -17,3 +17,7 @@ export async function Receive(url, d, method = "GET") {
     return data;
   }
 }
+
+export function $$(sel){
+  return document.querySelector(sel)
+}

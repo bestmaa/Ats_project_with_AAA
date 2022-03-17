@@ -1,5 +1,5 @@
 import React from 'react';
-export function MyInput({ name, use = false, wn = true, width = '150px', readOnly = false }) {
+export function MyInput({ name, use = false, wn = true, width = '200px', readOnly = false }) {
 	return (
 		<div className="flex">
 			{wn && (
@@ -23,7 +23,7 @@ export function MyInput({ name, use = false, wn = true, width = '150px', readOnl
 		</div>
 	);
 }
-export function MyInputDate({ name, use = false, wn = true, width = '150px', onInput }) {
+export function MyInputDate({ name, use = false, wn = true, width = '200px', onInput }) {
 	return (
 		<div className="flex">
 			{wn && (
@@ -47,7 +47,7 @@ export function MyInputDate({ name, use = false, wn = true, width = '150px', onI
 		</div>
 	);
 }
-export function MySelect({ name, use = false, data, wn = true, width = '150px' }) {
+export function MySelect({ name, use = false, data, wn = true, width = '200px' }) {
 	return (
 		<>
 			<div className="flex">
@@ -71,7 +71,7 @@ export function MySelect({ name, use = false, data, wn = true, width = '150px' }
 		</>
 	);
 }
-export function MyTextField({ name, use = false, wn = true, width = '150px' }) {
+export function MyTextField({ name, use = false, wn = true, width = '200px' }) {
 	return (
 		<>
 			<div className="flex">
@@ -85,7 +85,7 @@ export function MyTextField({ name, use = false, wn = true, width = '150px' }) {
 						{name}:
 					</b>
 				)}
-				<textarea placeholder={name} className="w-full p-2 rounded-6 mt-5 mb-5"></textarea>
+				<textarea placeholder={name} name={name} className="w-full p-2 rounded-6 mt-5 mb-5"></textarea>
 			</div>
 		</>
 	);

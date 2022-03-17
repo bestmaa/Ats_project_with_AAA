@@ -20,7 +20,7 @@ function statusSubmit(e){
 function Status() {
 	return (
 		<>
-		<form id = 'status'>
+		
 			<MyInput name="Assigned Suppliers" width="300px" />
 			<MySelect name="Referral Bounty" width="300px" />
 			<MyInput name="Scheduled Close On" width="300px" />
@@ -29,7 +29,7 @@ function Status() {
 				<button className="p-10 m-10 bg-red-400 rounded-4 hover:bg-red-900 hover:text-white">Cancel</button>
 			</div>
 		
-		</form>
+		
 	</>
 	);
 	

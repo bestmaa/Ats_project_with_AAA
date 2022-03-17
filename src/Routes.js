@@ -1,5 +1,6 @@
 
 import Demo from "./Demo";
+import AddCustomer from "./main/Customer/AddCustomer";
 import AddJobs from "./main/jobs/Addjobs";
 import PrimaryInfo from "./main/jobs/Component/PrimaryInfo";
 // import AddCustomer from "./Main/Customers/AddCustomer";
@@ -14,13 +15,18 @@ export let Navigate = [
     },
      {
          id: "jobs",
-         path: "/jobs",
+         path: "/job/add",
          element: <AddJobs />
      },
      {
          id: "primaryinfo",
          path: "/jobs/primaryinfo",
          element: <PrimaryInfo />
-     }
+     },
+     {
+         id: "customers-add",
+         path: "/customers/add",
+         element: <AddCustomer />
+     },
 
 ]
