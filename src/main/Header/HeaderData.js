@@ -6,6 +6,13 @@ let candidateChild = [
     // },
     
 ]
+let departmentsChild=[
+    {
+        id: "add",
+        to: "/department/add",
+        name: "AddDepartment",
+    },
+]
 let customersChild = [
     {
         id: "customers",
@@ -36,10 +43,16 @@ export let HeaderData = [
         name: "Jobs",
         Child: [...jobChild]
     },
+    // {
+    //     id: "customers",
+    //     to: "/customers",
+    //     name: "Customers",
+    //     Child: [...customersChild]
+    // },
     {
-        id: "customers",
-        to: "/customers",
-        name: "Customers",
-        Child: [...customersChild]
+        id: "department",
+        to: "/department",
+        name: "Department",
+        Child: [...departmentsChild]
     },
 ]
